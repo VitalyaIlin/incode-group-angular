@@ -1,0 +1,17 @@
+.clients-list-search{
+    position: relative;
+    height: 40px;
+    width: 100%;
+    margin-bottom: 7px;
+}
+
+.clients-list-search input{
+    padding: 0 7px;
+}
+
+.clients-list-search mat-icon{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #fff;
+}

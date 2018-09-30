@@ -1,0 +1,33 @@
+<section class="clients-wrap">
+
+  <div class="clients-list">
+    <app-search></app-search>
+    <div *ngFor="let client of clients | search:searchTerm" class="client-item" (click)="showClientDetail(client)">
+      <img src="{{client.general.avatar}}" alt="">
+      <div class="client-item-info">
+        <p>{{client.general.firstName}} <span>{{client.general.lastName}}</span></p>
+        <p>{{client.job.title}}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="clients-detail" *ngIf="showDetails">
+    <img src="{{clientData.general.avatar}}" alt="">
+    <div class="client-detail-info">
+      <p>{{clientData.general.firstName}} <span>{{clientData.general.lastName}}</span></p>
+      <p>{{clientData.job.title}}</p>
+      <p>{{clientData.job.company}}</p>
+      <div class="address">
+        <p>{{clientData.address.street}}</p>
+        <p>{{clientData.address.city}}</p>
+        <p>{{clientData.address.zipCode}}</p>
+        <p>{{clientData.address.country}}</p>
+      </div>
+      <div class="contact">
+        <p>{{clientData.contact.email}}</p>
+        <p>{{clientData.contact.phone}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
